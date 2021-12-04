@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Normalize.css"  type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    </head>
+
+    <section class="TopBar">
+        <div class="overlay">
+            <header class="flex-row">
+                    <div class="ksi-logo"><a href="index.html"><img src="img/ksi-logo-ds_360x.png" width="50%" height="50%"></a></div>
+                    <nav class="font3" id="navbar">
+                        <ul class="flex-row">
+                            <li class="navItem"> <a href="index.html" class="navLink"> Home </a></li>
+                            <li class="navItem"> <a href="index.html" class="navLink drop" > About me </a>
+                                <ul>
+                                    <li> <a href="youtuber.html"> Youtuber </a></li>
+                                    <li> <a href="singer.html"> Singer / Artist </a></li>
+                                    <li> <a href="babatunde.html"> Babatunde </a></li>
+                                </ul>
+                            </li>
+                            <li class="navItem"> <a href="tour.html"> Tour </a></li>
+                            <div class="flex-row">
+                                <a href="https://shopksi.com/pages/tickets" class="button buttoncolor"> TICKETS </a>
+                            </div>
+                        </ul>
+                    </nav>
+            </header>
+        </div>
+    </section>
+
+    <body>
+        <div class="flex-column" >
+            <div class="flex-row">
+                <p class="font1" id="para1"> 
+                    Olajida Olayinka "JJ" Olatunji started a youtube channel at 2008 called KSI and created many comedic videos and skits. He used to upload Gaming/Commentary videos
+                    of a video game series called Fifa. He dropped out of college after earning steady monthly income from his youtube career. Throughout his youtube career, He has made many 
+                    interesting characters inside his skits and one of them is called "Babatunde".</p>
+                <img src="img/ksiyoutube2010.jpg" alt="" width="560px" height="415px" id="dealwithitimg">
+            </div>
+            <div class="flex-row" id="skit">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7OfACZk59GA" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p class="font1" id='para2'> A Skit made by KSI. </p>
+            </div>
+            <br>
+
+            <p class="font1 flex-column" id="evo">Evolution of KSI's Youtube Career.</p>
+            <div class="slideshow">
+                <div class="diffpics fading">
+                  <div class="font1" id="number">1 / 3</div>
+                  <img src="img/ksiyoutube2011.jpg" width: 100%>
+                  <div class="font1" id="text">KSI in 2013</div>
+                </div>
+                
+                <div class="diffpics fading">
+                  <div class="font1" id="number">2 / 3</div>
+                  <img src="img/ksiyoutube2015.jpg" width: 100%>
+                  <div class="font1" id="text">KSI in 2016</div>
+                </div>
+                
+                <div class="diffpics fading">
+                  <div class="font1" id="number">3 / 3</div>
+                  <img src="img/ksiyoutube2020.jpg" width: 100%>
+                  <div class="font1" id="text">KSI in 2020</div>
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            <br>
+                
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("diffpics");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n > slides.length) {slideIndex = 1}    
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                      slides[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                }
+            </script>
+        </div>
+    </body>
+
+    <footer class="TopNav" id="mainfooter">
+        <div class="flex-row">
+            <div class="icon">
+                <a href="https://www.instagram.com/ksi/"><img src="img/instagram icon.png" alt=""></a>
+                <a href="https://twitter.com/ksi"><img src="img/twitter icon.png" alt=""></a>
+                <a href="https://www.facebook.com/KSIOlajidebt"><img src="img/facebook icon.png" alt=""></a>
+                <a href="https://www.youtube.com/c/ksi"><img src="img/youtube icon.png" alt=""></a>
+            </div>
+        </div>
+            
+        <div class="footercontent">
+            <div class="flex-column contactdetails icons bold">
+                <h3 class="contacts-title bold font4" id="contact"> Contact Information </h3>
+                <p class="contact.block"> 
+                    Email: <a href="mailto:KSI@gmail.com" class="email bold"> KSI@gmail.com </a> <br>
+                    Phone: +44 20 1234 5678
+                </p>
+            </div>
+
+            <p class="copyright"> Copyright &copy; KSI.Studios 2021 - All Rights Reserved</p>
+        </div>
+    </footer>
+
+</html>
